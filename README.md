@@ -1,5 +1,10 @@
 # SpringCloud-alibaba 学习项目
 项目分为两部分 , 内容中心和用户中心
+## 服务治理使用nacos
+1 无需注解,直接引入依赖后使用  
+2 领域模型:NameSpace--Group--Service--Cluster--Instance  
+3 跨NameSpace的服务不能相互调用
+
 ## mybatis使用的是通用mapper
 1 自带了简单的增删改查  
 2 需要在启动类加入注解  -- 通用mapper扫描接口  
@@ -34,3 +39,8 @@
         </dependencies>
     </plugin>
 ```
+## mybatis使用的是通用mapper
+1 RestTemplate+ Ribbon 组合,与常规一样  
+2 Ribbon配置可以代码和文件配置,取其一种  
+3 配置注意是全局还是针对某个服务的配置  
+4 默认轮询负载均衡,可以继承AbstractLoadBalancerRule重写负载均衡方法
