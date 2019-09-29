@@ -39,7 +39,13 @@
         </dependencies>
     </plugin>
 ```
-## mybatis使用的是通用mapper
+## Ribbon
+1 RestTemplate+ Ribbon 组合,与常规一样  
+2 Ribbon配置可以代码和文件配置,取其一种  
+3 配置注意是全局还是针对某个服务的配置  
+4 默认轮询负载均衡,可以继承AbstractLoadBalancerRule重写负载均衡方法
+
+## Feign
 1 RestTemplate+ Ribbon 组合,与常规一样  
 2 Ribbon配置可以代码和文件配置,取其一种  
 3 配置注意是全局还是针对某个服务的配置  
